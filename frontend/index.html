@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planner — To-Do Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Page 1: Name Entry (Book Cover) -->
+    <section id="cover" class="page cover visible">
+      <div class="book">
+        <div class="book-left"></div>
+        <div class="book-right">
+          <h1 class="title">My Planner</h1>
+          <p class="subtitle">Create your personal to-do lists</p>
+
+          <div class="name-box">
+            <label for="nameInput">Enter your name</label>
+            <input id="nameInput" placeholder="Your name..." />
+            <button id="startBtn" class="btn-primary">Prepare</button>
+          </div>
+
+          <p class="small">This planner supports Daily · Weekly · Monthly modes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 2: Planner Dashboard -->
+    <section id="dashboard" class="page dashboard">
+      <header class="dash-header">
+        <div>
+          <h2 id="greeting">Hello, User 👋</h2>
+          <p class="sub">What do you want to plan today?</p>
+        </div>
+        <div class="header-actions">
+          <select id="modeSelect" aria-label="Planner mode">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+          <button id="logoutBtn" class="btn-ghost">Change user</button>
+        </div>
+      </header>
+
+      <main class="dash-main">
+        <aside class="sidebar">
+          <div class="notebook-sections">
+            <div data-mode="daily" class="section active">Daily</div>
+            <div data-mode="weekly" class="section">Weekly</div>
+            <div data-mode="monthly" class="section">Monthly</div>
+          </div>
+          <div class="create-box">
+            <input id="taskTitle" placeholder="New task title..." />
+            <div id="modeSpecificInputs" class="mode-inputs">
+              <!-- JS will inject inputs based on mode -->
+            </div>
+            <button id="addTaskBtn" class="btn-primary">Add Task</button>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div id="tasksContainer" class="tasks"></div>
+        </section>
+      </main>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

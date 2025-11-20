@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Planner</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="planner-body">
+
+    <div class="planner-container">
+
+        <!-- Header -->
+        <div class="planner-header">
+            <h2 id="welcomeUser">Hello!</h2>
+            <p class="planner-sub">What do you want to plan today?</p>
+
+            <div class="mode-buttons">
+                <button class="mode-btn" onclick="switchMode('daily')">Daily</button>
+                <button class="mode-btn" onclick="switchMode('weekly')">Weekly</button>
+                <button class="mode-btn" onclick="switchMode('monthly')">Monthly</button>
+            </div>
+        </div>
+
+        <!-- Notebook Style Section -->
+        <div class="notebook-section">
+            <h3 id="currentModeTitle">Daily Planner</h3>
+
+            <div class="todo-input-box">
+                <input type="text" id="todoInput" placeholder="Write your task..." />
+                <button onclick="addTodo()" class="add-btn">Add</button>
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
