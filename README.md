@@ -1,4 +1,4 @@
-# Fullstack Task 5 — Planner / To-Do Manager  
+# Fullstack Task 5 —  To-Do Planner
 ### Internship Project — Cognify Technologies  
 
 This project is a **personal planner and to-do manager** that helps users organize tasks on **daily, weekly, and monthly** bases using:
